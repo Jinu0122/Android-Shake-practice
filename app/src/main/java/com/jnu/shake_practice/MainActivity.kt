@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
+import render.animations.Attention
 import render.animations.Bounce
 import render.animations.Render
 import kotlin.math.sqrt
@@ -83,7 +84,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener  {
             val render = Render(this)
 
             // Set Animation
-            render.setAnimation(Bounce().InDown(face_img))
+            render.setAnimation(Attention().Wobble(face_img))
             render.start()
 
             Handler().postDelayed({
